@@ -96,7 +96,7 @@ function runRenderBib(idx) {
         // Bib
         var bibDiv = document.getElementById('bib-div');
         var bibResult = citeproc.makeBibliography();
-        bibDiv.innerHTML = bibResult[1].join('ASGF\n');
+        bibDiv.innerHTML = bibResult[1].join('\n');
     } else {
         setTimeout(function() {
             runOneStep(idx);
