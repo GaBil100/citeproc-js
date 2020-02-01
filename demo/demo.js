@@ -8,7 +8,7 @@ var xhr = new XMLHttpRequest();
 
 var itemsArray = [];
 var citations = [];
-for (var i=1,ilen=8;i<ilen;i++) {
+for (var i=1,ilen=2;i<ilen;i++) {
     xhr.open('GET', 'citations-' + i + '.json', false);
     xhr.send(null);
     citations = citations.concat(JSON.parse(xhr.responseText));
