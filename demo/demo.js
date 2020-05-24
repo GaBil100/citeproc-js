@@ -70,7 +70,7 @@ function runOneStep(idx) {
         newNode.innerHTML = citeInfo[1];
         // Try for old node#
        
-        console.log(idx + ": " + citationStrings + "   " + citeInfo[1])
+        console.log(idx + ": " + citationStrings + "This Cite   " + citeInfo[1] + " End")
         //
         var oldNode = document.getElementById("node-" + citeInfo[2]);
         if (oldNode) {
