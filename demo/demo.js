@@ -60,7 +60,7 @@ var citeproc = getProcessor();
 
 function runOneStep(idx) {
     var citeDiv = document.getElementById('cite-div');
-    var citationParams = citations[5];  //idx
+    var citationParams = citations[0];  //idx
     var citationStrings = citeproc.processCitationCluster(citationParams[0], citationParams[1], [])[1];
     
     for (var citeInfo of citationStrings) {
@@ -70,7 +70,7 @@ function runOneStep(idx) {
         newNode.innerHTML = citeInfo[1];
         // Try for old node#
        
-        console.log(idx + ": " + citationStrings + "This Cite   " + citeInfo[1] + " End2")
+        console.log(idx + ": " + citationStrings + "This Cite   " + citeInfo[1] + " End3")
         //
         var oldNode = document.getElementById("node-" + citeInfo[2]);
         if (oldNode) {
