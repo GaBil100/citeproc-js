@@ -60,7 +60,7 @@ var citeproc = getProcessor();
 
 function runOneStep(idx) {
     var citeDiv = document.getElementById('cite-div');
-    var citationParams = citations[idx];  //idx
+    var citationParams = citations[5];  //idx
     var citationStrings = citeproc.processCitationCluster(citationParams[0], citationParams[1], [])[1];
     
     for (var citeInfo of citationStrings) {
@@ -70,7 +70,7 @@ function runOneStep(idx) {
         newNode.innerHTML = citeInfo[1];
         // Try for old node#
        
-        console.log(idx + ": " + citationStrings + "This Cite   " + citeInfo[1] + " End")
+        console.log(idx + ": " + citationStrings + "This Cite   " + citeInfo[1] + " End2")
         //
         var oldNode = document.getElementById("node-" + citeInfo[2]);
         if (oldNode) {
@@ -80,7 +80,7 @@ function runOneStep(idx) {
         }
         newNode.scrollIntoView();
     }
-    runRenderBib(idx+1);
+    runRenderBib(1); //idx+1
 }
 
 // This runs at document ready, and renders the bibliography
@@ -89,7 +89,7 @@ function renderBib() {
     runRenderBib(0);
 }
 function runRenderBib(idx) {
-    if (idx === citations.length) {
+    if (idx === 1) { //citations.length
         var t1 = performance.now();
         var timeDiv = document.getElementById("time-div");
         var timeSpan = document.getElementById("time-span");
