@@ -62,13 +62,16 @@ function runOneStep(idx) {
     var citeDiv = document.getElementById('cite-div');
     var citationParams = citations[idx];  //idx
     var citationStrings = citeproc.processCitationCluster(citationParams[0], citationParams[1], [])[1];
-    console.log(idx + ": " + citationStrings + "   " + citeInfo[1])
+    
     for (var citeInfo of citationStrings) {
         // Prepare node
         var newNode = document.createElement("div");
         newNode.setAttribute("id", "n" + citeInfo[2]);
         newNode.innerHTML = citeInfo[1];
-        // Try for old node
+        // Try for old node#
+       
+        console.log(idx + ": " + citationStrings + "   " + citeInfo[1])
+        //
         var oldNode = document.getElementById("node-" + citeInfo[2]);
         if (oldNode) {
             citeDiv.replaceChild(newNode, oldNode);
