@@ -76,7 +76,7 @@ function runOneStep(idx) {
         }
         newNode.scrollIntoView();
     }
-    runRenderBib(idx+1);
+    runRenderBib(citations.length);  //idx+1
 }
 
 // This runs at document ready, and renders the bibliography
