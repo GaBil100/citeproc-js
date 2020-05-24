@@ -62,7 +62,7 @@ function runOneStep(idx) {
     var citeDiv = document.getElementById('cite-div');
     var citationParams = citations[0];  //idx
     var citationStrings = citeproc.processCitationCluster(citationParams[0], citationParams[1], [])[1];
-    console.log(idx + ": " + citationStrings)
+    console.log(idx + ": " + citationStrings + "   " + citeInfo[1])
     for (var citeInfo of citationStrings) {
         // Prepare node
         var newNode = document.createElement("div");
