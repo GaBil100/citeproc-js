@@ -60,7 +60,7 @@ var citeproc = getProcessor();
 
 function runOneStep(idx) {
     var citeDiv = document.getElementById('cite-div');
-    var citationParams = citations[3];  //idx
+    var citationParams = citations[1];  //idx
     var citationStrings = citeproc.processCitationCluster(citationParams[0], citationParams[1], [])[1];
     for (var citeInfo of citationStrings) {
         // Prepare node
@@ -76,7 +76,7 @@ function runOneStep(idx) {
         }
         newNode.scrollIntoView();
     }
-    runRenderBib(citations.length);  //idx+1
+    runRenderBib(idx+1);
 }
 
 // This runs at document ready, and renders the bibliography
