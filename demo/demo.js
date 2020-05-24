@@ -60,7 +60,7 @@ var citeproc = getProcessor();
 
 function runOneStep(idx) {
     var citeDiv = document.getElementById('cite-div');
-    var citationParams = citations[0];  //idx
+    var citationParams = citations[idx];  //idx
     var citationStrings = citeproc.processCitationCluster(citationParams[0], citationParams[1], [])[1];
     console.log(idx + ": " + citationStrings + "   " + citeInfo[1])
     for (var citeInfo of citationStrings) {
